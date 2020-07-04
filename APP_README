@@ -1,0 +1,29 @@
+
+KICK 
+
+An app for fetching data on soccer teams using API football-data.org
+
+NOTES
+
+• Methodology: MVVM (The interfaces between entities are delegate on one case and
+   Notifications on the other (for the sake of example)
+
+• Networking: Combine. Hence, iOS 13 is a minimum requirement
+
+• Concurrency: GCD
+
+• Xcode requirements: Launch and storyboard provided like Apple demands nowadays
+
+• Documentation: None. Combine and MVVM modularity are pretty self-descriptive
+
+• Overuse: due to free account - if firing a lot of requests on a short time span,
+  server might issue a -1011 error (Server Side). This is intercepted on App, and response
+  is putting a warning on the message console.
+  A more thorough solution can be putting cache in Core Data and limit the
+  the times user can launch networks call (trade-off for updated info), but
+  this is beyond this drill limits and my time limits...
+
+BONUSES
+
+• An About section stack on right-top with some more info on team
+• Note that name, fixtures and squad appear in the main color of the team..
